@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+<!-- Include Scala.js compiled code -->
+<script src="target/scala-2.11/client-fastopt.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+
+<!-- Run tutorial.webapp.TutorialApp -->
+<script type="text/javascript">
+    var obj = jp.ne.opt.client.TutorialApp();
+    obj.main();
+</script>
+</html>
