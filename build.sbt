@@ -2,7 +2,12 @@ name := """scalareact"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val server = (project in file("./server"))
+  .enablePlugins(PlayScala)
+  .settings(commonSettings: _*)
+
+lazy val domain = (project in file("./domain"))
+  .settings(commonSettings: _*)
 
 scalaVersion := "2.11.7"
 
@@ -14,3 +19,9 @@ libraryDependencies ++= Seq(
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
+
+lazy val commonSettings = Seq(
+  organization := "jp.ne.opt",
+  scalaVersion := "2.11.8"
+)
+
